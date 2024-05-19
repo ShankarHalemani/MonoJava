@@ -8,7 +8,6 @@ public class MultiplicationOfTwoMatrices {
 
 		Scanner scanner = new Scanner(System.in);
 
-		
 		System.out.println("Enter number of rows for array 1");
 		int rows1 = scanner.nextInt();
 		System.out.println("Enter number of coloumns for array 1");
@@ -25,30 +24,24 @@ public class MultiplicationOfTwoMatrices {
 
 		int[][] array3 = new int[rows1][col2];
 
-		// Taking input for array 1
-		System.out.println("Enter array elements of 2D Array 1");
-		for (int i = 0; i < rows1; i++) {
-			for (int j = 0; j < col1; j++) {
-				array1[i][j] = scanner.nextInt();
-			}
-		}
-
-
-		// Taking input for array 2
-		System.out.println("Enter array elements of 2D Array 2");
-		for (int i = 0; i < rows2; i++) {
-			for (int j = 0; j < col2; j++) {
-				array2[i][j] = scanner.nextInt();
-			}
-		}
-
-
-		// Checking for matrix multiplication condition
 		if (col1 != rows2) {
 			System.out.println("Multiplication of these two matrix is not possible");
 		} else {
 
-		// Matrix multiplication
+			System.out.println("Enter array elements of 2D Array 1");
+			for (int i = 0; i < rows1; i++) {
+				for (int j = 0; j < col1; j++) {
+					array1[i][j] = scanner.nextInt();
+				}
+			}
+
+			System.out.println("Enter array elements of 2D Array 2");
+			for (int i = 0; i < rows2; i++) {
+				for (int j = 0; j < col2; j++) {
+					array2[i][j] = scanner.nextInt();
+				}
+			}
+
 			System.out.println("Multiplication result");
 			for (int i = 0; i < rows1; i++) {
 				for (int j = 0; j < col2; j++) {
@@ -57,7 +50,6 @@ public class MultiplicationOfTwoMatrices {
 				}
 			}
 
-		// Printing multiplied matrix result
 			for (int i = 0; i < rows1; i++) {
 				for (int j = 0; j < col2; j++) {
 					System.out.print(array3[i][j] + " ");
