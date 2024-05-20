@@ -14,7 +14,7 @@ public class AverageSumPairCheck {
 			sum += arr[i];
 		}
 
-		averageOfElements = sum / size;
+		averageOfElements = (int)(sum / size);
 
 		int left = 0;
 		int right = size - 1;
