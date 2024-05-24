@@ -24,10 +24,12 @@ public class MultiplicationOfTwoMatrices {
 
 		int[][] array3 = new int[rows1][col2];
 
+		//checking if matrix multiplication is possible or not
 		if (col1 != rows2) {
 			System.out.println("Multiplication of these two matrix is not possible");
 		} else {
 
+			//user inputs matrix 1
 			System.out.println("Enter array elements of 2D Array 1");
 			for (int i = 0; i < rows1; i++) {
 				for (int j = 0; j < col1; j++) {
@@ -35,6 +37,7 @@ public class MultiplicationOfTwoMatrices {
 				}
 			}
 
+			//user inputs matrix 2
 			System.out.println("Enter array elements of 2D Array 2");
 			for (int i = 0; i < rows2; i++) {
 				for (int j = 0; j < col2; j++) {
@@ -42,6 +45,7 @@ public class MultiplicationOfTwoMatrices {
 				}
 			}
 
+			//Matrix multiplcation logic
 			System.out.println("Multiplication result");
 			for (int i = 0; i < rows1; i++) {
 				for (int j = 0; j < col2; j++) {
@@ -49,7 +53,8 @@ public class MultiplicationOfTwoMatrices {
 						array3[i][j] += array1[i][k] * array2[k][j];
 				}
 			}
-
+			
+			//Printing resulting matrix after multiolication of two matrices
 			for (int i = 0; i < rows1; i++) {
 				for (int j = 0; j < col2; j++) {
 					System.out.print(array3[i][j] + " ");
