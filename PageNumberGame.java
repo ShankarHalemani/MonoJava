@@ -1,3 +1,5 @@
+//Book cricket application
+
 package com.techlabs.whileloop;
 
 import java.util.Random;
@@ -6,6 +8,7 @@ import java.util.Scanner;
 public class PageNumberGame {
 
 	public static void main(String[] args) {
+		//initialization
 		Scanner scanner = new Scanner(System.in);
 		Random random = new Random();
 
@@ -17,12 +20,12 @@ public class PageNumberGame {
 
 		int totalNumberOfPages = 300;
 
-		// Function to calculate player1 total score and turns
+		// calculating player1 total score and turns
 		int[] player1Results = playGame(scanner, random, player1, totalNumberOfPages);
 		int turnsOfPlayer1 = player1Results[0];
 		int totalScoreOfPlayer1 = player1Results[1];
 
-		// Function to calculate player2 total score and turns
+		// calculating player2 total score and turns
 		int[] player2Results = playGame(scanner, random, player2, totalNumberOfPages);
 		int turnsOfPlayer2 = player2Results[0];
 		int totalScoreOfPlayer2 = player2Results[1];
