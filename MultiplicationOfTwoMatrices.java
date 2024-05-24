@@ -8,6 +8,7 @@ public class MultiplicationOfTwoMatrices {
 
 		Scanner scanner = new Scanner(System.in);
 
+		//initialization of matrices
 		System.out.println("Enter number of rows for array 1");
 		int rows1 = scanner.nextInt();
 		System.out.println("Enter number of coloumns for array 1");
