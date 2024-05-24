@@ -30,13 +30,17 @@ public class ArrayProduct {
 		int countOfZero = 0;
 		int totalProduct = 1;
 
-		// calculating product of all array elements except zero
-		// counting number of zeros
+		
+		
 		for (int i = 0; i < n; i++) {
 
+			// counting number of zeros
 			if (arr[i] == 0) {
 				countOfZero++;
-			} else {
+			} 
+
+			// calculating product of all array elements except zero
+			else {
 				totalProduct *= arr[i];
 			}
 
