@@ -48,6 +48,7 @@ public class AverageSumPairCheck {
 			arr[i] = scanner.nextInt();
 		}
 
+		//sorting array for easy traversal of array elements
 		Arrays.sort(arr);
 
 		boolean pairExist = checkPairEqualsAverage(arr);
