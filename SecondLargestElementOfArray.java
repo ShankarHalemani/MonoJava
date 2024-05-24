@@ -30,11 +30,14 @@ public class SecondLargestElementOfArray {
 
 			// Find the second maximum element in the array
 			for (int i = 0; i < size; i++) {
+
+				//finding largest element in array
 				if (arr[i] > maxElement) {
 					secondLargestElement = maxElement;
 					maxElement = arr[i];
 				}
 
+				//finding second largest element in array
 				else if (arr[i] != maxElement && arr[i] > secondLargestElement) {
 					secondLargestElement = arr[i];
 				}
