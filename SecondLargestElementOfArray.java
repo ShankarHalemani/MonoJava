@@ -27,16 +27,18 @@ public class SecondLargestElementOfArray {
 
             // Find the second largest element in the sorted array
             int maxElement = arr[size - 1];
-            int secondLargestElement = Integer.MIN_VALUE;
+            int secondLargestElement = maxElement;
+            boolean found = false;
 
             for (int i = size - 2; i >= 0; i--) {
                 if (arr[i] != maxElement) {
                     secondLargestElement = arr[i];
+                    found = true;
                     break;
                 }
             }
 
-            if (secondLargestElement == Integer.MIN_VALUE) {
+            if (!found) {
                 System.out.println("There is no second largest element");
             } else {
                 System.out.println("Second largest element: " + secondLargestElement);
