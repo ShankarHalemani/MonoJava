@@ -14,14 +14,12 @@ public class WaterBill {
 		if(numOfUnits <=100) {
 			charge = numOfUnits * 5;
 		}
-		else {
-			if(numOfUnits<=250) {
+		else if(numOfUnits<=250) {
 				charge = numOfUnits * 10;
 			}
-			else {
-				charge = numOfUnits * 20;
+		else {
+			charge = numOfUnits * 20;
 			}
-		}
 		
 		int total_water_bill = charge + meter_charge;
 		System.out.println("Tota water bill : " + total_water_bill);
