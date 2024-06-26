@@ -8,57 +8,51 @@ public class MultiplicationOfTwoMatrices {
 
 		Scanner scanner = new Scanner(System.in);
 
-		//initialization of matrices
 		System.out.println("Enter number of rows for array 1");
-		int rows1 = scanner.nextInt();
+		int rowsOfFirstMatirx = scanner.nextInt();
 		System.out.println("Enter number of coloumns for array 1");
-		int col1 = scanner.nextInt();
+		int colOfFirstMatirx = scanner.nextInt();
 
-		int[][] array1 = new int[rows1][col1];
+		int[][] matrixOne = new int[rowsOfFirstMatirx][colOfFirstMatirx];
 
 		System.out.println("Enter number of rows for array 2");
-		int rows2 = scanner.nextInt();
+		int rowsOfSecondMatrix= scanner.nextInt();
 		System.out.println("Enter number of coloumns for array 2");
-		int col2 = scanner.nextInt();
+		int colOfSecondMatrix = scanner.nextInt();
 
-		int[][] array2 = new int[rows2][col2];
+		int[][] matrixTwo = new int[rowsOfSecondMatrix][colOfSecondMatrix];
 
-		int[][] array3 = new int[rows1][col2];
+		int[][] matrixThree = new int[rowsOfFirstMatirx][colOfSecondMatrix];
 
-		//checking if matrix multiplication is possible or not
-		if (col1 != rows2) {
+		if (colOfFirstMatirx != rowsOfSecondMatrix) {
 			System.out.println("Multiplication of these two matrix is not possible");
 		} else {
 
-			//user inputs matrix 1
 			System.out.println("Enter array elements of 2D Array 1");
-			for (int i = 0; i < rows1; i++) {
-				for (int j = 0; j < col1; j++) {
-					array1[i][j] = scanner.nextInt();
+			for (int i = 0; i < rowsOfFirstMatirx; i++) {
+				for (int j = 0; j < colOfFirstMatirx; j++) {
+					matrixOne[i][j] = scanner.nextInt();
 				}
 			}
 
-			//user inputs matrix 2
 			System.out.println("Enter array elements of 2D Array 2");
-			for (int i = 0; i < rows2; i++) {
-				for (int j = 0; j < col2; j++) {
-					array2[i][j] = scanner.nextInt();
+			for (int i = 0; i < rowsOfSecondMatrix; i++) {
+				for (int j = 0; j < colOfSecondMatrix; j++) {
+					matrixTwo[i][j] = scanner.nextInt();
 				}
 			}
 
-			//Matrix multiplcation logic
 			System.out.println("Multiplication result");
-			for (int i = 0; i < rows1; i++) {
-				for (int j = 0; j < col2; j++) {
-					for (int k = 0; k < rows2; k++)
-						array3[i][j] += array1[i][k] * array2[k][j];
+			for (int i = 0; i < rowsOfFirstMatirx; i++) {
+				for (int j = 0; j < colOfSecondMatrix; j++) {
+					for (int k = 0; k < rowsOfSecondMatrix; k++)
+						matrixThree[i][j] += matrixOne[i][k] * matrixTwo[k][j];
 				}
 			}
-			
-			//Printing resulting matrix after multiolication of two matrices
-			for (int i = 0; i < rows1; i++) {
-				for (int j = 0; j < col2; j++) {
-					System.out.print(array3[i][j] + " ");
+
+			for (int i = 0; i < rowsOfFirstMatirx; i++) {
+				for (int j = 0; j < colOfSecondMatrix; j++) {
+					System.out.print(matrixThree[i][j] + " ");
 				}
 				System.out.println();
 			}
